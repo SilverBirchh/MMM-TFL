@@ -8,15 +8,12 @@ ul {
   display: inline-flex;
   flex-direction: column;
   padding: 0px;
-}
-
-li:last-child {
-  border-bottom: 1px solid #b7b7b7;
+  width: 85%;
+  font-size: medium;
+  line-height: normal;
 }
 
 li {
-  border-top: 1px solid #b7b7b7;
-  border-right: 1px solid #b7b7b7;
   flex: 1;
   display: flex;
 }
@@ -32,10 +29,11 @@ span {
 
 .line {
   flex: 2;
+  text-align: left;
 }
 
 .good-service {
-  color: black;
+  color: white;
 }
 
 .suspended {
