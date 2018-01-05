@@ -23,6 +23,7 @@ Module.register("MMM-TFL", {
   fetchTubeStatus: function() {
     Log.info("GETTING THE DOM");
     const ul = document.createElement("ul");
+    ul.setAttribute("class", "MMM-TFL");
     const lines = this.config.lines;
 
     fetch("https://api.tfl.gov.uk/line/mode/tube/status" /*, {}*/)
@@ -57,6 +58,11 @@ Module.register("MMM-TFL", {
   },
 
   getLineStatusText: function(line) {
+    let text = "";
+    line.lineStatuses.forEach(status => {
+      text += status.statusSeverityDescription;
+      text += "\n";
+    });
     return `${line.lineStatuses[0].statusSeverityDescription}`;
   },
 

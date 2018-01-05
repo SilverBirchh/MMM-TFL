@@ -1,35 +1,32 @@
-body {
+.MMM-TFL ul {
   min-width: 235px;
   font-family: sans-serif;
-}
 
-ul {
   list-style: none;
   display: inline-flex;
   flex-direction: column;
   padding: 0px;
   width: 100%;
   font-size: medium;
-  line-height: normal;
+  line-height: 16.5px;
 }
 
-li {
+.MMM-TFL li {
   flex: 1;
   display: flex;
 }
 
-span {
-  padding: 10px;
-}
-
 .status {
+  flex: 1;
   transition: all 0.5s ease;
   float: right;
+  padding: 7px;
 }
 
 .line {
-  flex: 2;
+  flex: 1;
   text-align: left;
+  padding: 7px;
 }
 
 .good-service {
