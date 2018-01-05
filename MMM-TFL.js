@@ -2,21 +2,18 @@ Module.register("MMM-TFL", {
   // Default module config.
   defaults: {
     lines: "all",
-    updateTime: 600000
+    updateTime: 600000, // 10 minutes
+    fadeSpeed: 4000
   },
 
   start: function() {
     var self = this;
     setInterval(function() {
-      self.updateDom(); // no speed defined, so it updates instantly.
+      self.updateDom(this.config.fadeSpeed); // no speed defined updates instantly.
     }, this.config.updateTime); //perform every 1000 milliseconds.
   },
 
   getDom: function() {
-    return this.fetchTubeStatus();
-  },
-
-  updateDom: function() {
     return this.fetchTubeStatus();
   },
 
