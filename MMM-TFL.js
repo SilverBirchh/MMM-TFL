@@ -1,14 +1,26 @@
 Module.register("MMM-TFL", {
   // Default module config.
   defaults: {
-    lines: "all"
+    lines: "all",
+    updateTime: 600000
   },
 
   start: function() {
-    this.mySpecialProperty = "So much wow!";
-    Log.log(this.name + " is started!");
+    var self = this;
+    setInterval(function() {
+      self.updateDom(); // no speed defined, so it updates instantly.
+    }, this.config.updateTime); //perform every 1000 milliseconds.
   },
+
   getDom: function() {
+    return this.fetchTubeStatus();
+  },
+
+  updateDom: function() {
+    return this.fetchTubeStatus();
+  },
+
+  fetchTubeStatus: function() {
     Log.info("GETTING THE DOM");
     const ul = document.createElement("ul");
     const lines = this.config.lines;
@@ -45,13 +57,7 @@ Module.register("MMM-TFL", {
   },
 
   getLineStatusText: function(line) {
-    const reason = line.lineStatuses[0].reason
-      ? line.lineStatuses[0].reason.subString(
-          0,
-          line.lineStatuses[0].reason.indexOf(":")
-        )
-      : "";
-    return `${line.lineStatuses[0].statusSeverityDescription} ${reason}`;
+    return `${line.lineStatuses[0].statusSeverityDescription}`;
   },
 
   getLineStatusClass: function(line) {
