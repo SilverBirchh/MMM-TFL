@@ -1,0 +1,22 @@
+{
+  "name": "mmmtfl",
+  "version": "1.0.0",
+  "description": "MagicMirror module for Transport For London tube line status' Edit",
+  "main": "MMM-TFL.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilverBirchh/MMM-TFL.git"
+  },
+  "keywords": [
+    "MagicMirror"
+  ],
+  "author": "Bradley Birch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilverBirchh/MMM-TFL/issues"
+  },
+  "homepage": "https://github.com/SilverBirchh/MMM-TFL#readme"
+}

@@ -1,0 +1,125 @@
+body {
+  min-width: 235px;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+li:last-child {
+  border-bottom: 1px solid #b7b7b7;
+}
+
+li {
+  border-top: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  flex: 1;
+  display: flex;
+}
+
+span {
+  padding: 10px;
+}
+
+.status {
+  transition: all 0.5s ease;
+  float: right;
+}
+
+.line {
+  flex: 2;
+}
+
+.good-service {
+  color: black;
+}
+
+.suspended {
+  color: blue;
+  font-weight: 900;
+}
+
+.part-suspended {
+  color: blue;
+  font-weight: 900;
+}
+
+.planned-closure {
+  color: blue;
+  font-weight: 900;
+}
+
+.part-closure {
+  color: blue;
+  font-weight: 900;
+}
+
+.severe-delays {
+  color: blue;
+  font-weight: 900;
+}
+
+.reduced-service {
+  color: blue;
+  font-weight: 900;
+}
+
+.bus-service {
+  color: blue;
+  font-weight: 900;
+}
+
+.minor-delays {
+  color: blue;
+  font-weight: 900;
+}
+
+.central {
+  background-color: #dc241f;
+  color: white;
+}
+
+.bakerloo {
+  background-color: #894e24;
+  color: white;
+}
+.circle {
+  background-color: #ffce00;
+  color: black;
+}
+.district {
+  background-color: #007229;
+  color: white;
+}
+.hammersmith-city {
+  background-color: #d799af;
+  color: black;
+}
+.jubilee {
+  background-color: #6a7278;
+  color: white;
+}
+.metropolitan {
+  background-color: #751056;
+  color: white;
+}
+.northern {
+  background-color: #000000;
+  color: white;
+}
+.piccadilly {
+  background-color: #0019a8;
+  color: white;
+}
+.victoria {
+  background-color: #00a0e2;
+  color: black;
+}
+.waterloo-city {
+  background-color: #76d0bd;
+  color: black;
+}
