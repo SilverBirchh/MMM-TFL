@@ -2,7 +2,7 @@ Module.register("MMM-TFL", {
   // Default module config.
   defaults: {
     lines: "all",
-    updateTime: 600000
+    updateTime: 6000
   },
 
   start: function() {
@@ -13,10 +13,6 @@ Module.register("MMM-TFL", {
   },
 
   getDom: function() {
-    return this.fetchTubeStatus();
-  },
-
-  updateDom: function() {
     return this.fetchTubeStatus();
   },
 
@@ -50,6 +46,7 @@ Module.register("MMM-TFL", {
           ul.appendChild(li);
         });
       });
+
     return ul;
   },
 
