@@ -2,14 +2,14 @@ Module.register("MMM-TFL", {
   // Default module config.
   defaults: {
     lines: "all",
-    updateTime: 6000
+    updateTime: 60000
   },
 
   start: function() {
     var self = this;
     setInterval(function() {
       self.updateDom(); // no speed defined, so it updates instantly.
-    }, this.config.updateTime); //perform every 1000 milliseconds.
+    }, this.config.updateTime);
   },
 
   getDom: function() {
