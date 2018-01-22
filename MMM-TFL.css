@@ -29,46 +29,12 @@
   padding: 7px;
 }
 
-.good-service {
+li span.good-service {
   color: white;
+  font-weight: normal;
 }
 
-.suspended {
-  color: blue;
-  font-weight: 900;
-}
-
-.part-suspended {
-  color: blue;
-  font-weight: 900;
-}
-
-.planned-closure {
-  color: blue;
-  font-weight: 900;
-}
-
-.part-closure {
-  color: blue;
-  font-weight: 900;
-}
-
-.severe-delays {
-  color: blue;
-  font-weight: 900;
-}
-
-.reduced-service {
-  color: blue;
-  font-weight: 900;
-}
-
-.bus-service {
-  color: blue;
-  font-weight: 900;
-}
-
-.minor-delays {
+.status-problem {
   color: blue;
   font-weight: 900;
 }

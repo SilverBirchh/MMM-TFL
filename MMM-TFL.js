@@ -2,15 +2,14 @@ Module.register("MMM-TFL", {
   // Default module config.
   defaults: {
     lines: "all",
-    updateTime: 600000, // 10 minutes
-    fadeSpeed: 4000
+    updateTime: 60000
   },
 
   start: function() {
     var self = this;
     setInterval(function() {
-      self.updateDom(this.config.fadeSpeed); // no speed defined updates instantly.
-    }, this.config.updateTime); //perform every 1000 milliseconds.
+      self.updateDom();
+    }, this.config.updateTime);
   },
 
   getDom: function() {
@@ -18,7 +17,6 @@ Module.register("MMM-TFL", {
   },
 
   fetchTubeStatus: function() {
-    Log.info("GETTING THE DOM");
     const ul = document.createElement("ul");
     ul.setAttribute("class", "MMM-TFL");
     const lines = this.config.lines;
@@ -41,12 +39,14 @@ Module.register("MMM-TFL", {
           status.innerHTML = this.getLineStatusText(line);
           status.setAttribute("class", this.getLineStatusClass(line));
           status.classList.add("status");
+          status.classList.add("status-problem");
 
           li.appendChild(lineName);
           li.appendChild(status);
           ul.appendChild(li);
         });
       });
+
     return ul;
   },
 
