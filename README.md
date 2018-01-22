@@ -49,6 +49,10 @@ modules: [
 |victoria|Victoria|
 |waterloo-city|Waterloo & City|
 
+## Anything else I need to know
+
+Nope. The TFL api is free to use and does not require an API key. This project does not use any external dependencies.
+
 ## To Do
 
 [ ] Add TFL-Rail status </br>
