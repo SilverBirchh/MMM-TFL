@@ -53,16 +53,17 @@ modules: [
 |victoria|Victoria|
 |waterloo-city|Waterloo & City|
 
-## Anything else I need to know
+## Anything else you need to know?
 
-Nope. The TFL api is free to use and does not require an API key. This project does not use any external dependencies.
+Nope. The TFL API is free to use and does not require an API key. This project does not use any external dependencies. Any improvements please feel free to submit a PR.
 
 ## To Do
 
-[ ] Add TFL-Rail status </br>
-[ ] Add Overground status</br>
-[ ] Add bus status</br>
-[ ] Add config to config styles</br>
+[ ] - Add TFL-Rail status </br>
+[ ] - Add Overground status</br>
+[ ] - Add bus status</br>
+[ ] - Add alerts at certain times</br>
+[ ] - Testing
 
 ## Special Thanks
 - [Michael Teeuw](https://github.com/MichMich) for creating the awesome [MagicMirror2](https://github.com/MichMich/MagicMirror/tree/develop) project that made this module possible.
