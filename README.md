@@ -12,6 +12,10 @@ MagicMirror module for Transport For London tube line status designed to replica
 
 3. Add this module to your `config.js` file.
 
+## Updating
+
+1. In a terminal navigate into your MagicMirror's `modules` folder `cd MMM-TFL` and execute `git pull`.
+
 ## Config
 
 To use this module, add it to the modules array in the `config/config.js` file:

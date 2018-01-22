@@ -8,7 +8,7 @@ Module.register("MMM-TFL", {
   start: function() {
     var self = this;
     setInterval(function() {
-      self.updateDom(); // no speed defined, so it updates instantly.
+      self.updateDom();
     }, this.config.updateTime);
   },
 
@@ -17,7 +17,6 @@ Module.register("MMM-TFL", {
   },
 
   fetchTubeStatus: function() {
-    Log.info("GETTING THE DOM");
     const ul = document.createElement("ul");
     ul.setAttribute("class", "MMM-TFL");
     const lines = this.config.lines;
@@ -40,6 +39,7 @@ Module.register("MMM-TFL", {
           status.innerHTML = this.getLineStatusText(line);
           status.setAttribute("class", this.getLineStatusClass(line));
           status.classList.add("status");
+          status.classList.add("status-problem");
 
           li.appendChild(lineName);
           li.appendChild(status);
