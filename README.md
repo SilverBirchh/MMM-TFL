@@ -18,9 +18,9 @@ To use this module, add it to the modules array in the `config/config.js` file:
 ````javascript
 modules: [
 	{
-	module: 'MMM-TFL',
-	position: 'top_right',	// This can be any of the regions but works best on either side of the display
-	config: {
+		module: 'MMM-TFL',
+		position: 'top_right',	// This can be any of the regions but works best on either side of the display
+		config: {
           updateTime: 60000,
           lines: 'all'
 		}
