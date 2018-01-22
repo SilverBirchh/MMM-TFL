@@ -2,7 +2,7 @@ Module.register("MMM-TFL", {
   // Default module config.
   defaults: {
     lines: "all",
-    updateTime: 60000
+    updateTime: 600000
   },
 
   start: function() {

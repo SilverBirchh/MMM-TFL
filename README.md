@@ -4,6 +4,8 @@ MagicMirror module for Transport For London tube line status designed to replica
 
 ## Preview
 
+![MMM-TFL Preview](preview.png "MMM-TFL Preview")
+
 ## Installation
 
 1. Navigate into your MagicMirror's `modules` folder and execute `git clone https://github.com/SilverBirchh/MMM-TFL.git`.
