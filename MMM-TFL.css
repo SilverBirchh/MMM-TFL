@@ -84,3 +84,19 @@ li span.good-service {
   background-color: #76d0bd;
   color: black;
 }
+.dlr {
+  background-color: #00AFAD;
+  color: black;
+}
+.london-overground {
+  background-color: #E86A10;
+  color: black;
+}
+.tram {
+  background-color: #66CC00;
+  color: white;
+}
+.tfl-rail {
+  background-color: #0019A8;
+  color: white;
+}

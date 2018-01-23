@@ -54,6 +54,10 @@ modules: [
 |piccadilly|Piccadilly|
 |victoria|Victoria|
 |waterloo-city|Waterloo & City|
+|dlr|DLR|
+|london-overground|London Overground|
+|tram|Tram|
+|tfl-rail|TFL Rail|
 
 ## Anything else you need to know?
 
@@ -61,8 +65,7 @@ Nope. The TFL API is free to use and does not require an API key. This project d
 
 ## To Do
 
-[ ] - Add TFL-Rail status </br>
-[ ] - Add Overground status</br>
+[ ] - Add National Rail status</br>
 [ ] - Add bus status</br>
 [ ] - Add alerts at certain times</br>
 [ ] - Testing

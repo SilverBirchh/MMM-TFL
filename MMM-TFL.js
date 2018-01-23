@@ -21,7 +21,7 @@ Module.register("MMM-TFL", {
     ul.setAttribute("class", "MMM-TFL");
     const lines = this.config.lines;
 
-    fetch("https://api.tfl.gov.uk/line/mode/tube/status" /*, {}*/)
+    fetch("https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail,tram/status" /*, {}*/)
       .then(result => result.json())
       .then(result => {
         if (lines !== "all") {
