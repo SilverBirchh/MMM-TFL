@@ -2,7 +2,7 @@ Module.register("MMM-TFL", {
   // Default module config.
   defaults: {
     lines: "all",
-    modes: ['tube', 'overground']
+    modes: ['tube', 'overground', 'tram'],
     updateTime: 600000
   },
 
@@ -24,7 +24,7 @@ Module.register("MMM-TFL", {
 
     let url = 'https://api.tfl.gov.uk/line/mode/';
     this.config.modes.forEach((mode) => {
-      url += `${mode,}`
+      url += `${mode},`
     });
     url += '/status';
 
