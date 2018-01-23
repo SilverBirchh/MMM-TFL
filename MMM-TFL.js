@@ -2,6 +2,7 @@ Module.register("MMM-TFL", {
   // Default module config.
   defaults: {
     lines: "all",
+    modes: ['tube', 'overground']
     updateTime: 600000
   },
 
@@ -21,7 +22,13 @@ Module.register("MMM-TFL", {
     ul.setAttribute("class", "MMM-TFL");
     const lines = this.config.lines;
 
-    fetch("https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail,tram/status" /*, {}*/)
+    let url = 'https://api.tfl.gov.uk/line/mode/';
+    this.config.modes.forEach((mode) => {
+      url += `${mode,}`
+    });
+    url += '/status';
+
+    fetch(url /*, {}*/ )
       .then(result => result.json())
       .then(result => {
         if (lines !== "all") {
@@ -34,6 +41,10 @@ Module.register("MMM-TFL", {
           lineName.innerHTML = line.name;
           lineName.setAttribute("class", line.id);
           lineName.classList.add("line");
+
+          if (line.modeName === "national-rail") {
+            lineName.classList.add("national-rail");
+          }
 
           const status = document.createElement("span");
           status.innerHTML = this.getLineStatusText(line);
