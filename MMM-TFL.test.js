@@ -17,14 +17,6 @@ global.Module = {
   }
 };
 
-global.fetch = function() {
-  return Promise.resolve({
-    json: function() {
-      return resultsPromise
-    }
-  });
-}
-
 const lines = [{
   name: "Central",
   id: "central",
@@ -33,14 +25,16 @@ const lines = [{
     statusSeverityDescription: "Good Service"
   }]
 }]
+
+global.fetch = function() {
+  return Promise.resolve({
+    json: function() {
+      return resultsPromise
+    }
+  });
+}
+
 const resultsPromise = Promise.resolve(lines)
-
-
-global.MM = {
-  getModules: function() {
-    return modulesList;
-  }
-};
 
 beforeEach(() => {
   initialiseModule();
@@ -65,11 +59,16 @@ test('It returns the correct text for Good Service', () => {
       statusSeverityDescription: "Good Service"
     }]
   }
-  expect(moduleObject.getLineStatusText(line)).toEqual("Good Service");
+  expect(moduleObject.getLineStatusText(line)).toEqual("Good Service\n");
 });
 
-test('It returns a vaild ul', () => {
-  const ul = moduleObject.fetchTubeStatus();
-  console.log(ul.getAttribute("css"));
-  //expect(moduleObject.fetchTubeStatus()).toEqual("Good Service");
+test('It returns the correct text for multiple status', () => {
+  const line = {
+    lineStatuses: [{
+      statusSeverityDescription: "Good Service"
+    }, {
+      statusSeverityDescription: "Delays"
+    }]
+  }
+  expect(moduleObject.getLineStatusText(line)).toEqual("Good Service\nDelays\n");
 });

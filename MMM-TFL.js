@@ -27,7 +27,6 @@ Module.register("MMM-TFL", {
       url += `${mode},`
     });
     url += '/status';
-    console.log(url);
     fetch(url /*, {}*/ )
       .then(result => result.json())
       .then(result => {
@@ -58,7 +57,6 @@ Module.register("MMM-TFL", {
         });
       });
 
-console.log(ul);
     return ul;
   },
 
@@ -72,12 +70,10 @@ console.log(ul);
       text += status.statusSeverityDescription;
       text += "\n";
     });
-    // TODO: Use loop - loop will have to be from above
-    return `${line.lineStatuses[0].statusSeverityDescription}`;
+    return `${text}`;
   },
 
   getLineStatusClass: function(line) {
-    // TODO: Use loop
     return line.lineStatuses[0].statusSeverityDescription
       .toLowerCase()
       .replace(" ", "-");
