@@ -3,7 +3,9 @@ Module.register("MMM-TFL", {
   defaults: {
     lines: "all",
     modes: ["tube", "overground", "tram"],
-    updateTime: 600000
+    updateTime: 600000,
+    app_id: null,
+    app_key: null
   },
 
   start: function() {
@@ -28,6 +30,10 @@ Module.register("MMM-TFL", {
       url += `${mode},`;
     });
     url += "/status";
+
+    if (this.config.app_id && this.config.app_key) {
+      url += `?app_id=${this.config.app_id}&app_key=${this.config.app_key}`;
+    }
 
     try {
       fetch(url /*, {}*/)

@@ -30,7 +30,7 @@ modules: [
     config: {
           updateTime: 60000,
                     modes: ['tube', 'overground'],
-          lines: 'all'
+          lines: 'all',
     }
     }
 ]
@@ -41,6 +41,8 @@ Option       | Description
 `updateTime` | Number. Optional. The interval time in seconds to update the status of the tube line. Defaults to `60000` (10 minutes)
 `modes`      | Array. Optional. The lines displayed can be refined by a mode if you only want to view lines in a specific mode. Saves having to add quite a few lines to the `lines` array. Defaults to `['tube', 'overground']`
 `lines`      | Array / String. Optional. The tube lines you want to keep track of. Can be an array of line id's e.g. If you specify a line but not the mode it is contained in, the line will not be included on the board. `['central', 'bakerloo', 'circle']` or `all` which will display all lines. Defaults to `all`.
+app_id | String. Optional. Your person App ID from https://api-portal.tfl.gov.uk/login
+app_key | String. Optional. Your person App key from https://api-portal.tfl.gov.uk/login
 
 ## Lines
 
@@ -89,7 +91,7 @@ west-midlands-trains       | West Midlands Trains       | national-rail
 
 ## Anything else you need to know?
 
-Nope. The TFL API is free to use and does not require an API key. This project does not use any external dependencies. Any improvements please feel free to submit a PR.
+You can optioally includes an API key. Although TFL doesn't require one to run. You can get a key from [here](https://api-portal.tfl.gov.uk/login). After after getting your keys you can add them to the config. This project does not use any external dependencies. Any improvements please feel free to submit a PR.
 
 ## To Do
 
